@@ -34,8 +34,8 @@ jobs:
             fi
           done
 
-      - name: Run tests
-        run: pytest app/test.py -v
+      - name: Run poker tests
+        run: pytest app/test_poker.py -v
 
       - name: Stop server
         if: always()
