@@ -52,23 +52,23 @@ DEPOSIT = {
 EVENT = {
     "title": "Sunday Poker MTT",
     "description": "Torneo Texas Hold'em",
-    "date": "2026-06-01T20:00:00",
+    "date": "2099-06-01T20:00:00",
     "location": "Online",
     "chips": 10000,
     "buy_in": 5,
     "montepremi": 500,
-    "end_late_reg": "2026-06-01T21:00:00",
+    "end_late_reg": "2099-06-01T21:00:00",
 }
 
 EVENT_UPDATED = {
     "title": "Updated Poker MTT",
     "description": "Torneo aggiornato",
-    "date": "2026-07-01T21:00:00",
+    "date": "2099-07-01T21:00:00",
     "location": "Poker Room",
     "chips": 15000,
     "buy_in": 10,
     "montepremi": 1000,
-    "end_late_reg": "2026-07-01T22:00:00",
+    "end_late_reg": "2099-07-01T22:00:00",
 }
 
 EVENT_LATE_CLOSED = {
