@@ -583,7 +583,10 @@ def test_register_insufficient_balance():
     clean_db()
 
     POST("/users", USER)
-    POST("/events", EVENT)
+    expensive_event = dict(EVENT)
+    expensive_event["buy_in"] = 100
+
+    POST("/events", expensive_event)
 
     event_id = GET("/events").json()[0]["id"]
 
