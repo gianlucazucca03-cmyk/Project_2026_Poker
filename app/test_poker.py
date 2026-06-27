@@ -551,7 +551,7 @@ def test_register_to_event_valid():
 
     response = POST(f"/events/{event_id}/register", USER)
 
-    assert response.status_code in (200, 201)
+    assert response.status_code in (200, 201), response.txt
 
     registrations = GET("/registrations").json()
 
@@ -623,7 +623,7 @@ def test_delete_registration():
         f"/registrations?username={USER['username']}&event_id={event_id}"
     )
 
-    assert response.status_code == 200
+    assert response.status_code == 200, register_response.txt
 
     registrations = GET("/registrations").json()
 
