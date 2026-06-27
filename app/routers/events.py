@@ -169,7 +169,7 @@ def register_to_event(event_id: int, user_data: UserCreate, session: SessionDep)
         select(User).where(User.email == user_data.email)
     ).first()
 
-    if existing_email is not None:
+    if existing_email is not None  and existing_email.username != user_data.username:
         raise HTTPException(
             status_code=400,
             detail="Email already exists, no multi-account"
@@ -180,7 +180,7 @@ def register_to_event(event_id: int, user_data: UserCreate, session: SessionDep)
         select(User).where(User.numero_carta == user_data.numero_carta)
     ).first()
     
-    if existing_card is not None:
+    if existing_card is not None and existing_card.username != user_data.username:
         raise HTTPException(
             status_code=400,
             detail="Card already exists"
