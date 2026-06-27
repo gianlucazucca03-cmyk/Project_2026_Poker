@@ -365,3 +365,5 @@ Elimina una singola registrazione, identificata tramite query parameter.
 
 **Risposta** `200 OK`.  
 **Risposta** `404 Not Found` se l'evento, l'utente o la registrazione non esistono.
+
+#Final version submitted.
